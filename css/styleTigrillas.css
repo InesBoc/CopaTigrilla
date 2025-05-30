@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Michroma&family=Rajdhani:wght@500&display=swap');
+
+:root{
+    --white: rgb(245, 243, 244);
+
+}
+
+
+
+body {
+    
+  
+    background: linear-gradient(90deg, rgb(224, 212, 212) 0%, rgba(235, 167, 165, 0.967) 35%, rgba(244,239,239,1) 100%);
+    margin: 0;
+}
+
+header,
+main,
+footer { 
+    height: calc(100hv/3);
+    border: 5px;
+}
+html > body> main> div {
+    display:inline-block;
+    text-size-adjust: 50%;
+    text-align: center;
+}
+
+header,
+footer {
+  background: /*radial-gradient(circle, rgba(235,23,8,1) 0%, rgba(27,21,20,1) 100%)*/ rgb(223, 223, 219);
+  color: white;
+  padding: 20px 5px;
+  text-align: center;
+}
+
+#header{
+    margin: auto;
+    width: 500px;
+}
+
+/******* TITULO HEADER *******/
+.header {
+    display: flex;
+    padding: 3px;
+    position: relative;
+    }
+h1{
+    text-align: center;
+    display:inline-flex;
+    font-family: 'Michroma', sans-serif;
+    font-size: 2rem;
+    color: black;
+    margin-left: 50px;
+    margin-top: 20px;
+    animation: move 1.5s ease-out;
+    transition-duration: 1s;
+
+}
+
+
+@keyframes move {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0);}
+  }
+
+  /******* MAIN *******/
+
+  .main{
+    height: 100vh;
+  }
+ h2 h3{
+
+    text-align: center;
+    display:inline-flex;
+    font-family: 'Michroma', sans-serif;
+    font-size: 2rem;
+    color: var(--black); 
+    margin-left: 50px;
+    margin-top: 20px;
+    animation: move 1.5s ease-out;
+    transition-duration: 1s;
+
+}
+
+.colIni div{ 
+    display: inline-block;
+    text-size-adjust: auto;
+    margin-left: 2rem;
+    margin-bottom: 10px;
+}
+.colIni .banner3{
+    height: 100vh;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+
+}
+.colIni2 { 
+   display: flex;
+   color: blueviolet;
+   font-style:normal;
+    margin-left: 2rem;
+    margin-bottom: 10px;  
+    text-size-adjust: auto;    
+}
+.text1{
+    height: 100vh;
+    width: 100vh;
+    text-align: center;
+    font-family: 'Michroma', sans-serif;
+    font-style: italic;
+ }    
+
+.categorías {
+    font-size:large;
+    color: white;
+    padding: 5px;
+    margin: 100px;
+    height: 4vh;
+    background-color: rgb(77, 74, 73);
+    font-family: 'Michroma', sans-serif;
+
+
+}
+li, ul {
+    list-style: none;
+    padding: 5px;
+}
+li{
+    background-color: rgba(33, 32, 34, 0.348);
+    border-radius: 5px; 
+    margin: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.categorías li:hover> ul{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(248, 18, 18);
+    color:beige
+}
+.categorías li ul:hover{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(248, 18, 18);
+    color:beige
+}
+
+.inscripción {
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+button  {
+    background-color: rgba(33, 32, 34, 0.348);
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Michroma', sans-serif;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;         
+}
+button:hover {
+    background-color: rgb(248, 18, 18);
+    color:beige
+}
+
+
+/****** MEDIA QUERIES *******/
+
+@media screen and (max-width: 640px) {
+    .header {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+h1,
+h2, h3 {
+        font-size: 1rem;
+    }
+    
+    .text1,
+    .banner3,
+    .categorías,
+    .colIni,
+    .colIni2,
+    .inscripción{
+        width: 90%;
+
+    }
+    .banner3 img{
+        width: 100%;
+        height: auto;   
+
+    }
+    li{
+        margin: 1px;
+    }
+      .categorías{
+        margin: 50px;
+    }
+
+    }
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+      .header img {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1,
+h2, h3 {
+        flex-wrap: wrap;
+        font-size: 2rem;
+    }
+    .text1,
+    .banner3,
+    .categorías,
+    .colIni,
+    .colIni2,
+    .inscripción{
+        width: 90%;
+       
+    }
+      .banner3 img{
+        width: 100%;
+        height: auto;   
+
+    }
+     li{
+        margin: 3px;
+    }
+    .categorías{
+        margin: 50px;
+    }
+
+  }
+  
+
+
+
+/*FOOTER*/
+footer {
+    display: flex;
+    background: rgb(9, 0, 1);
+    color: black;
+    padding: 20px 5px ;
+    text-align: center ;
+    justify-content: center;
+    }
+.social-links {
+    text-align: center;
+    margin-top:0px;
+}
+.social-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
